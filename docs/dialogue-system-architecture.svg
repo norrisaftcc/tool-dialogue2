@@ -1,0 +1,74 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect x="0" y="0" width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="22" font-weight="bold" text-anchor="middle">Dialogue System Architecture</text>
+  
+  <!-- Core Library Box -->
+  <rect x="250" y="280" width="300" height="180" rx="10" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="400" y="310" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">dialogue_lib.py</text>
+  
+  <!-- Core Library Components -->
+  <rect x="270" y="330" width="260" height="30" rx="5" fill="#ffffff" stroke="#28a745" stroke-width="1"/>
+  <text x="400" y="350" font-family="Arial" font-size="14" text-anchor="middle">JSON Parser</text>
+  
+  <rect x="270" y="370" width="260" height="30" rx="5" fill="#ffffff" stroke="#28a745" stroke-width="1"/>
+  <text x="400" y="390" font-family="Arial" font-size="14" text-anchor="middle">Dialogue Manager</text>
+  
+  <rect x="270" y="410" width="260" height="30" rx="5" fill="#ffffff" stroke="#28a745" stroke-width="1"/>
+  <text x="400" y="430" font-family="Arial" font-size="14" text-anchor="middle">Quest Tracker</text>
+  
+  <!-- Streamlit UI Box -->
+  <rect x="100" y="100" width="250" height="140" rx="10" fill="#cfe2ff" stroke="#0d6efd" stroke-width="2"/>
+  <text x="225" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">streamlit_app.py</text>
+  
+  <!-- Streamlit Components -->
+  <rect x="120" y="150" width="210" height="25" rx="5" fill="#ffffff" stroke="#0d6efd" stroke-width="1"/>
+  <text x="225" y="167" font-family="Arial" font-size="12" text-anchor="middle">Web UI Components</text>
+  
+  <rect x="120" y="185" width="210" height="25" rx="5" fill="#ffffff" stroke="#0d6efd" stroke-width="1"/>
+  <text x="225" y="202" font-family="Arial" font-size="12" text-anchor="middle">Retro Terminal Styling</text>
+  
+  <!-- Console UI Box -->
+  <rect x="450" y="100" width="250" height="140" rx="10" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="575" y="130" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">console_app.py</text>
+  
+  <!-- Console Components -->
+  <rect x="470" y="150" width="210" height="25" rx="5" fill="#ffffff" stroke="#dc3545" stroke-width="1"/>
+  <text x="575" y="167" font-family="Arial" font-size="12" text-anchor="middle">Text Interface</text>
+  
+  <rect x="470" y="185" width="210" height="25" rx="5" fill="#ffffff" stroke="#dc3545" stroke-width="1"/>
+  <text x="575" y="202" font-family="Arial" font-size="12" text-anchor="middle">Numbered Response Selection</text>
+  
+  <!-- JSON Data Box -->
+  <rect x="250" y="500" width="300" height="60" rx="10" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="400" y="530" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle">JSON Dialogue Files</text>
+  <text x="400" y="550" font-family="Arial" font-size="12" text-anchor="middle">Dialogue Content & Structure</text>
+  
+  <!-- Connection Lines -->
+  <!-- Streamlit to Core -->
+  <line x1="225" y1="240" x2="350" y2="280" stroke="#0d6efd" stroke-width="2"/>
+  <text x="270" y="270" font-family="Arial" font-size="12" fill="#0d6efd">Uses</text>
+  
+  <!-- Console to Core -->
+  <line x1="575" y1="240" x2="450" y2="280" stroke="#dc3545" stroke-width="2"/>
+  <text x="530" y="270" font-family="Arial" font-size="12" fill="#dc3545">Uses</text>
+  
+  <!-- Core to JSON -->
+  <line x1="400" y1="460" x2="400" y2="500" stroke="#28a745" stroke-width="2"/>
+  <text x="410" y="480" font-family="Arial" font-size="12" fill="#28a745">Loads</text>
+  
+  <!-- Legend -->
+  <rect x="650" y="400" width="20" height="20" fill="#cfe2ff" stroke="#0d6efd" stroke-width="2"/>
+  <text x="680" y="415" font-family="Arial" font-size="14">Streamlit UI</text>
+  
+  <rect x="650" y="430" width="20" height="20" fill="#f8d7da" stroke="#dc3545" stroke-width="2"/>
+  <text x="680" y="445" font-family="Arial" font-size="14">Console UI</text>
+  
+  <rect x="650" y="460" width="20" height="20" fill="#d4edda" stroke="#28a745" stroke-width="2"/>
+  <text x="680" y="475" font-family="Arial" font-size="14">Core Library</text>
+  
+  <rect x="650" y="490" width="20" height="20" fill="#fff3cd" stroke="#ffc107" stroke-width="2"/>
+  <text x="680" y="505" font-family="Arial" font-size="14">Data Files</text>
+</svg>

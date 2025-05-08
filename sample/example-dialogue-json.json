@@ -1,0 +1,180 @@
+{
+  "starting_dialogue": "intro_1",
+  
+  "dialogues": [
+    {
+      "id": "intro_1",
+      "npc_name": "Commander",
+      "text": "Welcome aboard the Stellar Station. I'm Commander Shepard, and we're facing a critical situation that requires your expertise.",
+      "responses": [
+        {
+          "id": "resp_1",
+          "text": "Thanks, Commander. What's the situation?",
+          "next_dialogue": "mission_brief"
+        },
+        {
+          "id": "resp_2",
+          "text": "Where am I? How did I get here?",
+          "next_dialogue": "location_info"
+        }
+      ]
+    },
+    {
+      "id": "mission_brief",
+      "npc_name": "Commander",
+      "text": "Our station's main reactor is failing. Without repairs, we'll lose life support in 12 hours. You're the only engineer qualified to fix it.",
+      "responses": [
+        {
+          "id": "resp_3",
+          "text": "I'll help. What do I need to do?",
+          "next_dialogue": "task_info"
+        },
+        {
+          "id": "resp_4",
+          "text": "Why me? Don't you have other engineers?",
+          "next_dialogue": "why_you"
+        }
+      ]
+    },
+    {
+      "id": "location_info",
+      "npc_name": "Commander",
+      "text": "You're aboard the Stellar Station, humanity's furthest outpost in the Tau Ceti system. You arrived yesterday on the transport ship after volunteering for our engineering program.",
+      "responses": [
+        {
+          "id": "resp_5",
+          "text": "I remember now. Tell me about the situation.",
+          "next_dialogue": "mission_brief"
+        },
+        {
+          "id": "resp_6",
+          "text": "I need a moment to process this.",
+          "next_dialogue": "take_time"
+        }
+      ]
+    },
+    {
+      "id": "why_you",
+      "npc_name": "Commander",
+      "text": "Our chief engineer was injured in the initial malfunction. The other staff don't have your specialized knowledge of quantum containment systems. We reviewed your credentials - you've fixed similar problems before.",
+      "responses": [
+        {
+          "id": "resp_7",
+          "text": "Alright, I understand. I'll help.",
+          "next_dialogue": "task_info"
+        },
+        {
+          "id": "resp_8",
+          "text": "I need more information about the reactor first.",
+          "next_dialogue": "reactor_info"
+        }
+      ]
+    },
+    {
+      "id": "take_time",
+      "npc_name": "Commander",
+      "text": "I understand this is a lot to take in. Unfortunately, we don't have much time. The station's reactor is failing, and we need your help.",
+      "responses": [
+        {
+          "id": "resp_9",
+          "text": "Tell me more about this reactor problem.",
+          "next_dialogue": "mission_brief"
+        }
+      ]
+    },
+    {
+      "id": "reactor_info",
+      "npc_name": "Commander",
+      "text": "It's a standard Mark VII Quantum Fusion Reactor, but with customized coolant systems for deep space operation. The containment field is fluctuating and we're seeing dangerous radiation spikes in sectors 7 through 9.",
+      "responses": [
+        {
+          "id": "resp_10",
+          "text": "I see the problem. Let's get started.",
+          "next_dialogue": "task_info"
+        }
+      ]
+    },
+    {
+      "id": "task_info",
+      "npc_name": "Commander",
+      "text": "You'll need to stabilize the containment field first, then repair the coolant systems. Security Officer Chen will escort you to the reactor room. Be careful - radiation levels are high.",
+      "responses": [
+        {
+          "id": "resp_11",
+          "text": "I'll need protective gear and tools.",
+          "next_dialogue": "equipment"
+        },
+        {
+          "id": "resp_12",
+          "text": "Let's not waste time. Take me there now.",
+          "next_dialogue": "to_reactor"
+        }
+      ]
+    },
+    {
+      "id": "equipment",
+      "npc_name": "Commander",
+      "text": "Of course. We've prepared a Rad-X suit for you and a specialized toolkit is waiting in the prep room. Officer Chen will help you gear up before heading to the reactor.",
+      "responses": [
+        {
+          "id": "resp_13",
+          "text": "Thanks. I'm ready when you are.",
+          "next_dialogue": "to_reactor"
+        }
+      ]
+    },
+    {
+      "id": "to_reactor",
+      "npc_name": "Security Officer Chen",
+      "text": "Follow me to the reactor room. Stay close - we've had to seal off several corridors due to radiation leaks. The situation is getting worse by the hour.",
+      "responses": [
+        {
+          "id": "resp_14",
+          "text": "Tell me what you've observed with the reactor.",
+          "next_dialogue": "chen_observations"
+        },
+        {
+          "id": "resp_15",
+          "text": "Let's hurry. Time is critical.",
+          "next_dialogue": "reactor_arrival"
+        }
+      ]
+    },
+    {
+      "id": "chen_observations",
+      "npc_name": "Security Officer Chen",
+      "text": "I'm no engineer, but I've seen the coolant pipes vibrating violently before they ruptured. The control terminals are showing all kinds of errors, and there's a strange humming sound coming from the core chamber.",
+      "responses": [
+        {
+          "id": "resp_16",
+          "text": "That helps. Let's get to the reactor room.",
+          "next_dialogue": "reactor_arrival"
+        }
+      ]
+    },
+    {
+      "id": "reactor_arrival",
+      "npc_name": "Security Officer Chen",
+      "text": "Here we are. The reactor control room. You can access the core from that terminal. I'll stand guard, but I can't stay long due to radiation exposure. Good luck - we're all counting on you.",
+      "responses": [
+        {
+          "id": "resp_17",
+          "text": "I'll do my best. Let me get to work.",
+          "next_dialogue": "ending"
+        }
+      ]
+    },
+    {
+      "id": "ending",
+      "npc_name": "System",
+      "text": "End of demo dialogue. In a full game, you would now begin the reactor repair sequence.",
+      "responses": [
+        {
+          "id": "resp_18",
+          "text": "Return to the beginning",
+          "next_dialogue": "intro_1"
+        }
+      ]
+    }
+  ]
+}
