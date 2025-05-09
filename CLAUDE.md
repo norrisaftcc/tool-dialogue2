@@ -32,6 +32,7 @@ The project follows an iterative approach with two main development phases:
   - `dialogue_lib.py`: Core dialogue management functionality
   - `console_app.py`: Text-based console interface
   - `streamlit_app.py`: Web-based UI built with Streamlit
+  - `editor_app.py`: Visual dialogue editor built with Streamlit
 - `/json/`: Example dialogue files in JSON format
 - `/docs/`: Design documents and specifications
 
@@ -51,6 +52,12 @@ cd src
 streamlit run streamlit_app.py
 ```
 
+To run the dialogue editor (requires Streamlit installed):
+```bash
+cd src
+streamlit run editor_app.py
+```
+
 ### Installing Dependencies
 
 ```bash
@@ -59,7 +66,7 @@ pip install streamlit
 
 ## Development Notes
 
-The system follows a modular design with three main components:
+The system follows a modular design with four main components:
 
 1. **Core Library (`dialogue_lib.py`)**: Handles all dialogue logic independently of UI
    - Loading and parsing dialogue JSON files
@@ -76,31 +83,40 @@ The system follows a modular design with three main components:
    - Clickable response buttons
    - Dialogue history
 
+4. **Dialogue Editor (`editor_app.py`)**: Visual dialogue creation tool
+   - Create and modify dialogue trees
+   - Add, edit, and delete dialogue nodes and responses
+   - Preview dialogue flow
+   - Validate dialogue structure
+
 The system uses JSON files to store dialogue trees. Each dialogue has an ID, NPC name, text, and a list of possible responses. Each response has an ID, text, and the ID of the next dialogue to navigate to.
 
 When enhancing the system, maintain this clean separation between the core library and UI layers.
 
 ## Next Development Steps
 
-For the next phase of development (moving beyond MVP), focus on these key areas:
+For the next phase of development, focus on these key areas:
 
 1. **Implement Quest System**:
    - Enhance `dialogue_lib.py` to fully support the quest tracking system
    - Add the handling of script commands for quest updates
    - Implement the `get_active_quests` functionality
+   - Update the dialogue editor to support quest creation and management
 
 2. **Expand Validation**:
    - Enhance the `validate_dialogue_tree` method to check quest references
    - Add more comprehensive validation for dialogue structure
-   - Implement validation reporting in the UI
+   - Expand validation reporting in the editor UI with visual indicators
 
 3. **UI Enhancements**:
    - Add retro terminal styling to the Streamlit interface
    - Implement the debug information panel
    - Add quest display to both UI interfaces
    - Add file upload functionality to Streamlit
+   - Add visual graph representation of dialogue trees in the editor
 
 4. **Testing and Documentation**:
    - Create comprehensive test cases
    - Add more example dialogue files
    - Enhance documentation with user guides
+   - Add in-app help and tutorials for the dialogue editor
