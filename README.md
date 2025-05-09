@@ -16,6 +16,9 @@ A simple yet flexible system for creating, loading, and navigating text-based co
 - Responses determine the path through the conversation tree
 - Modular design separates core functionality from UI implementations
 
+<img src="docs/dialogue-tree-diagram-svg.svg">
+*sample dialogue tree*
+
 ## Getting Started
 
 ### Prerequisites
