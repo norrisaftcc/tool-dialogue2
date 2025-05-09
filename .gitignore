@@ -1,1 +1,4 @@
 /toolvenv
+
+**/.claude/settings.local.json
+*.pyc

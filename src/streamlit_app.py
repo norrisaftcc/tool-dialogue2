@@ -179,7 +179,7 @@ def main():
             for response in st.session_state.current_dialogue["responses"]:
                 if st.button(response["text"], key=response["id"]):
                     handle_response(response["id"])
-                    st.experimental_rerun()
+                    st.rerun()
 
 
 if __name__ == "__main__":

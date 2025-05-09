@@ -10,6 +10,22 @@ This project is a dialogue tree system that allows users to create, load, and na
 - Multiple UI options including a console interface and Streamlit web interface 
 - Support for branching conversations
 
+## Development Approach
+
+The project follows an iterative approach with two main development phases:
+
+1. **MVP Implementation** (Current Version):
+   - Core library with basic functionality
+   - Simple console interface
+   - Basic Streamlit web interface
+   - Support for branching dialogues
+
+2. **Full Implementation** (Future Work):
+   - Quest system tracking
+   - Script commands for triggering events
+   - Enhanced styling options
+   - Complete dialogue history view
+
 ## Repository Structure
 
 - `/src/`: Core implementation files
@@ -63,3 +79,28 @@ The system follows a modular design with three main components:
 The system uses JSON files to store dialogue trees. Each dialogue has an ID, NPC name, text, and a list of possible responses. Each response has an ID, text, and the ID of the next dialogue to navigate to.
 
 When enhancing the system, maintain this clean separation between the core library and UI layers.
+
+## Next Development Steps
+
+For the next phase of development (moving beyond MVP), focus on these key areas:
+
+1. **Implement Quest System**:
+   - Enhance `dialogue_lib.py` to fully support the quest tracking system
+   - Add the handling of script commands for quest updates
+   - Implement the `get_active_quests` functionality
+
+2. **Expand Validation**:
+   - Enhance the `validate_dialogue_tree` method to check quest references
+   - Add more comprehensive validation for dialogue structure
+   - Implement validation reporting in the UI
+
+3. **UI Enhancements**:
+   - Add retro terminal styling to the Streamlit interface
+   - Implement the debug information panel
+   - Add quest display to both UI interfaces
+   - Add file upload functionality to Streamlit
+
+4. **Testing and Documentation**:
+   - Create comprehensive test cases
+   - Add more example dialogue files
+   - Enhance documentation with user guides
