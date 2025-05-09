@@ -18,7 +18,7 @@ A simple yet flexible system for creating, loading, and navigating text-based co
 
 <img src="docs/dialogue-tree-diagram-svg.svg" width="500">
 
-**sample dialogue tree**
+*sample dialogue tree*
 
 ## Getting Started
 
