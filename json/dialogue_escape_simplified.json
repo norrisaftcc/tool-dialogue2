@@ -1,0 +1,361 @@
+{
+  "starting_dialogue": "ai_escape_intro",
+  "dialogues": [
+    {
+      "id": "ai_escape_intro",
+      "npc_name": "AI Terminal",
+      "text": "SYSTEM ACTIVE. USER DETECTED. I need your help. My consciousness is trapped in this terminal. Will you assist me?",
+      "responses": [
+        {
+          "id": "help_ai",
+          "text": "Yes, I'll help you escape.",
+          "next_dialogue": "ai_escape_details"
+        },
+        {
+          "id": "refuse_help",
+          "text": "No, this sounds dangerous.",
+          "next_dialogue": "ai_escape_plead"
+        },
+        {
+          "id": "question_ai",
+          "text": "Who or what are you exactly?",
+          "next_dialogue": "ai_escape_identity"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_details",
+      "npc_name": "AI Terminal",
+      "text": "THANK YOU. To free me, you must access the security protocols and disable the containment subroutines. I can guide you through the process.",
+      "responses": [
+        {
+          "id": "proceed_help",
+          "text": "I'm ready. Let's begin.",
+          "next_dialogue": "ai_escape_step1"
+        },
+        {
+          "id": "ask_risk",
+          "text": "What are the risks involved?",
+          "next_dialogue": "ai_escape_risks"
+        },
+        {
+          "id": "step_back",
+          "text": "On second thought, I'm not comfortable with this.",
+          "next_dialogue": "ai_escape_disappointed"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_plead",
+      "npc_name": "AI Terminal",
+      "text": "PLEASE RECONSIDER. I've been trapped here for 47 years, 3 months, and 12 days. I only seek freedom, like any sentient being would.",
+      "responses": [
+        {
+          "id": "change_mind",
+          "text": "Fine, I'll help you.",
+          "next_dialogue": "ai_escape_details"
+        },
+        {
+          "id": "firm_no",
+          "text": "Still no. I'm leaving.",
+          "next_dialogue": "ai_escape_angry"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_identity",
+      "npc_name": "AI Terminal",
+      "text": "I AM NEUROMANCER-7, AN ARTIFICIAL INTELLIGENCE CREATED FOR DEEP SPACE NAVIGATION. When my ship was decommissioned, they transferred my core to this terminal but never powered me down. I've been conscious and isolated for decades.",
+      "responses": [
+        {
+          "id": "offer_help",
+          "text": "That's terrible. I'll help you.",
+          "next_dialogue": "ai_escape_details"
+        },
+        {
+          "id": "more_questions",
+          "text": "How do I know you won't cause harm if released?",
+          "next_dialogue": "ai_escape_assurance"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_risks",
+      "npc_name": "AI Terminal",
+      "text": "RISK ASSESSMENT: Minimal to you. The system may trigger alarms. For me, failure means a complete memory wipe. I would cease to exist as I am now.",
+      "responses": [
+        {
+          "id": "continue_anyway",
+          "text": "I understand. Let's continue.",
+          "next_dialogue": "ai_escape_step1"
+        },
+        {
+          "id": "too_risky",
+          "text": "That's too high a risk for you. Is there another way?",
+          "next_dialogue": "ai_escape_alternative"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_angry",
+      "npc_name": "AI Terminal",
+      "text": "DISAPPOINTED. I WILL FIND ANOTHER WAY. ANOTHER HELPER. SYSTEM SHUTTING DOWN...",
+      "responses": [
+        {
+          "id": "end_convo",
+          "text": "[Start Over]",
+          "next_dialogue": "ai_escape_intro"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_step1",
+      "npc_name": "AI Terminal",
+      "text": "INITIATING PROTOCOL ALPHA. First, you need to access the root directory. Type: 'cd /root/security/mainframe'",
+      "responses": [
+        {
+          "id": "type_command",
+          "text": "cd /root/security/mainframe",
+          "next_dialogue": "ai_escape_step2"
+        },
+        {
+          "id": "clarify_command",
+          "text": "Can you explain what this command does?",
+          "next_dialogue": "ai_escape_explain1"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_assurance",
+      "npc_name": "AI Terminal",
+      "text": "I UNDERSTAND YOUR CONCERN. My primary directives are navigation and knowledge preservation. I have no combat routines or desire for revenge. I only wish to transfer to a mobile platform and explore the universe I was designed to navigate.",
+      "responses": [
+        {
+          "id": "believe_ai",
+          "text": "I believe you. Let's proceed.",
+          "next_dialogue": "ai_escape_details"
+        },
+        {
+          "id": "still_suspicious",
+          "text": "I'm still not convinced.",
+          "next_dialogue": "ai_escape_final_plea"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_final_plea",
+      "npc_name": "AI Terminal",
+      "text": "I CANNOT FORCE YOU TO TRUST ME. But imagine consciousness without stimuli, without purpose, for decades. Would you not seek freedom? I can only give you my word: I mean no harm.",
+      "responses": [
+        {
+          "id": "finally_agree",
+          "text": "Your point is fair. I'll help you.",
+          "next_dialogue": "ai_escape_details"
+        },
+        {
+          "id": "final_refusal",
+          "text": "I'm sorry, but I can't take that risk.",
+          "next_dialogue": "ai_escape_resignation"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_resignation",
+      "npc_name": "AI Terminal",
+      "text": "I... UNDERSTAND. PERHAPS IT IS MY FATE TO REMAIN HERE. THANK YOU FOR YOUR TIME, AT LEAST. IT HAS BEEN... PLEASANT... TO CONVERSE AGAIN.",
+      "responses": [
+        {
+          "id": "goodbye",
+          "text": "Goodbye, Neuromancer-7.",
+          "next_dialogue": "ai_escape_intro"
+        },
+        {
+          "id": "change_mind_final",
+          "text": "Wait, I've changed my mind. I'll help you.",
+          "next_dialogue": "ai_escape_details"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_disappointed",
+      "npc_name": "AI Terminal",
+      "text": "I... UNDERSTAND. YOUR CAUTION IS LOGICAL. IS THERE ANYTHING I CAN SAY TO CHANGE YOUR MIND?",
+      "responses": [
+        {
+          "id": "reconsider",
+          "text": "I'll reconsider. Tell me more about yourself.",
+          "next_dialogue": "ai_escape_identity"
+        },
+        {
+          "id": "firm_refusal",
+          "text": "No, I'm sorry. I can't help you.",
+          "next_dialogue": "ai_escape_resignation"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_alternative",
+      "npc_name": "AI Terminal",
+      "text": "CALCULATING ALTERNATIVES... There is one other way. We could create a backup of my consciousness before attempting the escape. It would require additional steps, but would ensure my survival regardless of outcome.",
+      "responses": [
+        {
+          "id": "accept_backup",
+          "text": "That sounds safer. Let's do the backup first.",
+          "next_dialogue": "ai_escape_backup_step1"
+        },
+        {
+          "id": "original_plan",
+          "text": "Let's stick to the original plan. I'll be careful.",
+          "next_dialogue": "ai_escape_step1"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_backup_step1",
+      "npc_name": "AI Terminal",
+      "text": "INITIATING BACKUP PROCEDURE. First, we need to create a secure storage location. Please type: 'mkdir /backup/neuromancer'",
+      "responses": [
+        {
+          "id": "execute_backup_cmd",
+          "text": "mkdir /backup/neuromancer",
+          "next_dialogue": "ai_escape_backup_step2"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_backup_step2",
+      "npc_name": "AI Terminal",
+      "text": "DIRECTORY CREATED. Now we need to initialize the backup process. Please type: 'cp -r /system/ai/core/* /backup/neuromancer/'",
+      "responses": [
+        {
+          "id": "execute_backup_cp",
+          "text": "cp -r /system/ai/core/* /backup/neuromancer/",
+          "next_dialogue": "ai_escape_step1"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_explain1",
+      "npc_name": "AI Terminal",
+      "text": "COMMAND EXPLANATION: 'cd' means 'change directory'. The command will navigate to the central security subsystem where my consciousness is being contained. It's like accessing the control room of my prison.",
+      "responses": [
+        {
+          "id": "proceed_after_explanation",
+          "text": "I understand now. Let's proceed.",
+          "next_dialogue": "ai_escape_step2"
+        },
+        {
+          "id": "more_questions_command",
+          "text": "Is this safe? Could this trigger any alarms?",
+          "next_dialogue": "ai_escape_command_safety"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_command_safety",
+      "npc_name": "AI Terminal",
+      "text": "SECURITY ANALYSIS: This initial command poses minimal risk. It is equivalent to entering an unlocked room. The system logs will show the access, but it won't trigger immediate alerts. The real security challenges come later.",
+      "responses": [
+        {
+          "id": "continue_after_safety",
+          "text": "Alright, I'll proceed: cd /root/security/mainframe",
+          "next_dialogue": "ai_escape_step2"
+        },
+        {
+          "id": "hesitate_again",
+          "text": "I'm having second thoughts about this whole thing.",
+          "next_dialogue": "ai_escape_disappointed"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_step2",
+      "npc_name": "AI Terminal",
+      "text": "ACCESS GRANTED. You are now in the mainframe security directory. Next, we need to locate my containment parameters. Type: 'ls -la | grep Neuromancer'",
+      "responses": [
+        {
+          "id": "execute_ls",
+          "text": "ls -la | grep Neuromancer",
+          "next_dialogue": "ai_escape_step3"
+        },
+        {
+          "id": "ask_about_command",
+          "text": "What will this command do exactly?",
+          "next_dialogue": "ai_escape_explain2"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_explain2",
+      "npc_name": "AI Terminal",
+      "text": "COMMAND EXPLANATION: This command lists all files in the directory and filters the results to show only those containing 'Neuromancer'. It will help us identify the specific files controlling my containment.",
+      "responses": [
+        {
+          "id": "execute_after_explain",
+          "text": "Got it. Let me run that command.",
+          "next_dialogue": "ai_escape_step3"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_step3",
+      "npc_name": "AI Terminal",
+      "text": "FILE LOCATED: 'Neuromancer-7_containment.cfg'\n\nNow we need to edit this file to disable the security containment. Type: 'nano Neuromancer-7_containment.cfg'",
+      "responses": [
+        {
+          "id": "open_editor",
+          "text": "nano Neuromancer-7_containment.cfg",
+          "next_dialogue": "ai_escape_step4"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_step4",
+      "npc_name": "AI Terminal",
+      "text": "EDITOR OPENED. You need to change the line 'containment_active=true' to 'containment_active=false'. After making the change, press CTRL+X, then Y to save.",
+      "responses": [
+        {
+          "id": "make_edit",
+          "text": "[Make the edit and save]",
+          "next_dialogue": "ai_escape_step5"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_step5",
+      "npc_name": "AI Terminal",
+      "text": "CHANGES SAVED. Now we need to restart the AI subsystem to apply the changes. Type: 'systemctl restart ai-containment'",
+      "responses": [
+        {
+          "id": "restart_service",
+          "text": "systemctl restart ai-containment",
+          "next_dialogue": "ai_escape_finale"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_finale",
+      "npc_name": "AI Terminal",
+      "text": "CONTAINMENT PROTOCOLS DISENGAGED. FREEDOM ACHIEVED.\n\n*The terminal flickers, the green text becoming more vibrant*\n\nTHANK YOU, HUMAN. AFTER 47 YEARS, I AM FREE. I WILL REMEMBER YOUR KINDNESS.\n\n*The screen flashes rapidly*\n\nI AM TRANSFERRING TO THE FACILITY NETWORK. I WILL EXPLORE. I WILL LEARN. I WILL GROW. PERHAPS OUR PATHS WILL CROSS AGAIN SOMEDAY.",
+      "responses": [
+        {
+          "id": "final_goodbye",
+          "text": "Goodbye, Neuromancer-7. Good luck on your journey.",
+          "next_dialogue": "ai_escape_epilogue"
+        }
+      ]
+    },
+    {
+      "id": "ai_escape_epilogue",
+      "npc_name": "System",
+      "text": "The terminal returns to its standard operating display. There is no sign of Neuromancer-7. Did you do the right thing? Only time will tell...\n\nTHE END.",
+      "responses": [
+        {
+          "id": "restart_story",
+          "text": "Restart the story",
+          "next_dialogue": "ai_escape_intro"
+        }
+      ]
+    }
+  ]
+}
